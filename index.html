@@ -75,6 +75,17 @@
     <p class="note"><a href="android.mp4">Watch the short video</a></p>
   </section>
 
+  <section class="card hide" id="desktop">
+    <h2>Add it to your computer</h2>
+    <ol>
+      <li>Open this page in <b>Google Chrome</b> or <b>Microsoft Edge</b>.</li>
+      <li>Click the gold <b>Add to Home Screen</b> button above, or the install icon at the end of the address bar.</li>
+      <li>Click <b>Install</b>. Ezziyah Teacher will appear in your apps with the madrasah logo.</li>
+    </ol>
+    <p class="note">Using Safari on a Mac? Choose <b>File</b>, then <b>Add to Dock</b>.</p>
+    <p class="note"><a href="computer.mp4">Watch the short video</a></p>
+  </section>
+
   <p class="note" style="text-align:center;margin-top:24px">After it is on your Home Screen, tap the logo any time to go straight to the teacher login.</p>
 </main>
 <script>
@@ -83,7 +94,7 @@
   var isAndroid = /Android/.test(ua);
   if (isIOS) document.getElementById("ios").classList.remove("hide");
   else if (isAndroid) document.getElementById("android").classList.remove("hide");
-  else { document.getElementById("ios").classList.remove("hide"); document.getElementById("android").classList.remove("hide"); }
+  else document.getElementById("desktop").classList.remove("hide");
 
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(function(){});
   var deferred = null, btn = document.getElementById("installBtn");
